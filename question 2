@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+struct Color {
+    int red;
+    int green;
+    int blue;
+};
+
+int main() {
+    Color arr[5] = {
+        {69, 169, 75},
+        {169, 100, 250},
+        {170, 18, 45},
+        {10, 230, 143},
+        {123, 213, 150},
+    };
+    for (int i = 0; i < 3; ++i) {
+        arr[i].red = 255 - arr[i].red;
+        arr[i].green = 255 - arr[i].green;
+        arr[i].blue = 255 - arr[i].blue;
+    }
+    for (int i = 0; i < 5; i++){
+        cout << "Color " << i + 1 << ": ("
+             << arr[i].red << ", "
+             << arr[i].green << ", "
+             << arr[i].blue << ")\n";
+    }
+    return 0;
+}
